@@ -19,10 +19,10 @@ class UserManager(BaseUserManager):
 
     def create_superuser(self, phone, password,**extra_fields):
         """Create and Save a super User"""
-
         user = self.model(phone=phone, **extra_fields)
         user.set_password(password)
         user.is_staff = True
+        user.is_shopkeeper = True
         user.is_superuser = True
         user.save(using=self._db)
 
@@ -33,6 +33,8 @@ class UserManager(BaseUserManager):
 class User(AbstractBaseUser, PermissionsMixin):
     """"Custom Model"""
     phone = PhoneNumberField(unique=True,null=False,blank=False)
+    is_shopkeeper = models.BooleanField(default=True)
+    is_staff = models.BooleanField(default=False)
     objects = UserManager()
     USERNAME_FIELD = 'phone'
 
