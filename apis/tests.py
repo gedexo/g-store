@@ -69,7 +69,7 @@ class PublicUserApiTests(TestCase):
         self.client.post(CREATE_USER_URL, payload)
         payload = {
             'phone': '+919656248731',
-            'password': 'testpass',
+            'password': 'Mahsbhsbdhsdb',
         }
         res = self.client.post(CREATE_TOKEN_URL, payload)
         
