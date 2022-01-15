@@ -34,6 +34,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'rest_framework',
+    'versatileimagefield',
     'rest_framework_simplejwt',
     'django.contrib.admin',
     'django.contrib.auth',
