@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'phonenumber_field',
     'apis',
     'fashion',
     'fruits',
@@ -77,6 +78,9 @@ TEMPLATES = [
     },
 ]
 
+
+
+AUTH_USER_MODEL = 'apis.User'
 WSGI_APPLICATION = 'gstore.wsgi.application'
 
 
