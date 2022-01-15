@@ -31,12 +31,14 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'phonenumber_field',
     'apis',
     'fashion',
     'fruits',
@@ -45,6 +47,7 @@ INSTALLED_APPS = [
     'plumbingandelectrical',
     'stationary',
     'vegitable',
+    'stores',
 ]
 
 MIDDLEWARE = [
@@ -75,6 +78,9 @@ TEMPLATES = [
     },
 ]
 
+
+
+AUTH_USER_MODEL = 'apis.User'
 WSGI_APPLICATION = 'gstore.wsgi.application'
 
 
