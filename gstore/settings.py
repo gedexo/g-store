@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'plumbingandelectrical',
     'stationary',
     'vegitable',
+    'stores',
 ]
 
 MIDDLEWARE = [
