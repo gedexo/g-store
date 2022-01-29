@@ -22,7 +22,7 @@ class UserManager(BaseUserManager):
         user = self.model(phone=phone, **extra_fields)
         user.set_password(password)
         user.is_staff = True
-        user.is_shopkeeper = True
+        user.is_shopkeeper = False
         user.is_superuser = True
         user.save(using=self._db)
 

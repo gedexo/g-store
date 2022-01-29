@@ -6,4 +6,5 @@ from . views import *
 app_name = 'stores'
 
 urlpatterns = [
+    
 ]
